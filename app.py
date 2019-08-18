@@ -21,7 +21,6 @@ def index():
         user_info = google_auth.get_user_info()
         return '<div>You are currently logged in as ' + user_info['given_name'] + '<div><pre>' + json.dumps(user_info, indent=4) + "</pre>"
 
-    return 'You are not currently logged in.'
-
-# http://localhost:8040/google/login
-# http://localhost:8040/google/logout
+	return render_template("/index.html")
+# localhost:8040/google/login
+# localhost:8040/google/logout
